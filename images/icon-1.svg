@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g>
+        <path d="M7 14A7 7 0 0 1 7 0v7h7a7.008 7.008 0 0 1-7 7z" transform="translate(2.001 4.5)" style="fill:none;stroke:#303038;stroke-linecap:round;stroke-width:1.5px"/>
+        <path d="M6.99 7H0V0a7.22 7.22 0 0 1 6.99 7z" transform="translate(11.501 2)" style="fill:none;stroke:#303038;stroke-linecap:round;stroke-width:1.5px"/>
+    </g>
+</svg>

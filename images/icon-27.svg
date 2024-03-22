@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <g>
+        <path transform="translate(3.4 4)" style="fill:none;stroke:#303038;stroke-linecap:round;stroke-width:1.5px" d="M0 0h13.167"/>
+        <path transform="translate(3.4 8)" style="fill:none;stroke:#303038;stroke-linecap:round;stroke-width:1.5px" d="M0 0h13.167"/>
+        <path transform="translate(3.4 12)" style="fill:none;stroke:#303038;stroke-linecap:round;stroke-width:1.5px" d="M0 0h13.167"/>
+        <path transform="translate(3.4 16)" style="fill:none;stroke:#303038;stroke-linecap:round;stroke-width:1.5px" d="M0 0h8"/>
+    </g>
+</svg>

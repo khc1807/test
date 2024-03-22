@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <link rel="stylesheet" type="text/css" href="./css/base.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-select.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/nice-select.css"> -->
+    <link href="./css/realgrid-style.css" rel="stylesheet" />
+    <script src="./js/realgrid.2.8.0.min.js"></script>
+    <!--리얼그리드 라이센스 -->
+    <script src="js/realgrid-lic.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./rMateChartH5/Assets/Css/rMateChartH5.css" />
+
+    <!-- rMateChartH5 라이센스 -->
+    <script language="javascript" type="text/javascript" src="./LicenseKey/rMateChartH5License.js"></script>
+
+    <!-- 실제적인 rMateChartH5 라이브러리 -->
+    <script type="text/javascript" src="./rMateChartH5/JS/rMateChartH5.js"></script>
+
+    <!-- rMateChartH5 테마 js -->
+    <script type="text/javascript" src="./rMateChartH5/Assets/Theme/theme.js"></script>
+    <!-- 샘플 작동을 위한 css와 js -->
+    <script type="text/javascript" src="./rMateChartH5//Web/JS/common.js"></script>
+    <script type="text/javascript" src="./rMateChartH5//Web/JS/sample_util.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="./rMateChartH5//Web/sample.css" /> -->
+
+    <!-- SyntaxHighlighter -->
+    <script type="text/javascript" src="./rMateChartH5//Web/syntax/shCore.js"></script>
+    <script type="text/javascript" src="./rMateChartH5//Web/syntax/shBrushJScript.js"></script>
+    <!-- <link type="text/css" rel="stylesheet" href="./rMateChartH5//Web/syntax/shCoreDefault.css" /> -->
+</head>
+<style>
+    #realgrid {
+        width: 100%;
+        height: 400px;
+        padding: 20px;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header data-include1="header" id="header" class="header-wrap"></header>
+    <!-- //header -->
+    <div id="wrap" class="wrap">
+        <!-- lnb -->
+        <div data-include2="lnb" id="lnb" class="lnb"></div>
+        <!-- //lnb -->
+        <div id="containers" class="containers">
+            <div class="content">
+                <div class="content__title">
+                    <div class="content__title__core">
+                        <button type="button" class="content__title__core__bookmark-toggle-btn"
+                            data-action="bookmark-toggle">
+                            <span>즐겨찾기</span>
+                        </button>
+                        <strong>불완전판매율</strong>
+                    </div>
+                    <div class="content__title__breadcrumb">
+                        <span>Home</span>
+                        <span>금감원상시지표</span>
+                        <span>모집관리</span>
+                        <span>불완전판매율</span>
+                    </div>
+                </div>
+
+                <div class="content__search-box">
+                    <div class="form-date type-search-box">
+                        <span class="content__search-box__label">기준 년 월</span>
+                        <input type="text" title="date" value="2023.01">
+                    </div>
+                    <div class="form-date type-search-box">
+                        <span class="content__search-box__label">기준 년 월</span>
+                        <input type="text" title="date" value="2023.01" disabled>
+                    </div>
+                    <div class="form-input type-search-box type-search-btn">
+                        <span class="content__search-box__label">기관코드(명)</span>
+                        <div class="form-input__box">
+                            <input type="text" title="text">
+                            <button type="button" class="form-input__search-btn">
+                                <span>검색</span>
+                            </button>
+                        </div>
+                        <strong class="form-input__office">솔샘점</strong>
+                    </div>
+                    <div class="form-input type-search-box">
+                        <span class="content__search-box__label">기관코드(명)</span>
+                        <input type="text" title="text" disabled>
+                    </div>
+                    <div class="form-select type-search-box">
+                        <span class="content__search-box__label">테스트샘플</span>
+                        <select title="미선택" class="selectpicker">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Barbecue</option>
+                            <option>긴내용이들어가있는경우확인용</option>
+                        </select>
+                    </div>
+                    <div class="form-select type-search-box">
+                        <span class="content__search-box__label">테스트샘플</span>
+                        <select title="미선택" class="selectpicker" disabled>
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Barbecue</option>
+                            <option>긴내용이들어가있는경우확인용</option>
+                        </select>
+                    </div>
+                    <div class="content__search-box__last-line-box">
+                        <div class="form-radio type-search-box">
+                            <span class="content__search-box__label">산출 단위</span>
+                            <div class="form-radio__box">
+                                <input type="radio" id="r-1" name="test1" checked>
+                                <label for="r-1">1개월</label>
+                            </div>
+                            <div class="form-radio__box">
+                                <input type="radio" id="r-2" name="test1">
+                                <label for="r-2">금감원기준</label>
+                            </div>
+                        </div>
+                        <div class="form-radio type-search-box">
+                            <span class="content__search-box__label">산출 단위</span>
+                            <div class="form-radio__box">
+                                <input type="radio" id="r-3" name="test2" checked disabled>
+                                <label for="r-3">1개월</label>
+                            </div>
+                            <div class="form-radio__box">
+                                <input type="radio" id="r-4" name="test2" disabled>
+                                <label for="r-4">금감원기준</label>
+                            </div>
+                        </div>
+                        <div class="content__search-box__last-line-box__btn-box">
+                            <button type="button" class="white-btn">
+                                <span>관하상세</span>
+                            </button>
+                            <button type="button" class="black-btn">
+                                <span>조회</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 차트가 삽입될 DIV -->
+                <div id="chartHolder" class="chart_wrap"></div>
+                <!-- 그리드가 삽입될 DIV -->
+                <div class="grid-title-wrap">
+                    <div class="grid-title-wrap__title-box">
+                        <strong class="grid-title-wrap__title-box__total-guide">총 <em>5</em> 건</strong>
+                        <strong class="grid-title-wrap__title-box__unit-guide">(단위 %)</strong>
+                    </div>
+                    <div class="grid-title-wrap__btn-box">
+                        <button type="button" class="icon-btn type-write">
+                            <span>등록</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <colgroup>
+                            <col style="width:190px">
+                            <col>
+                            <col style="width:190px">
+                            <col>
+                            <col style="width:190px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    사번<span class="required-mark">＊</span>
+                                </th>
+                                <td>
+                                    <div class="form-input">
+                                        <input type="text" title="text" value="1077123" disabled="">
+                                    </div>
+                                </td>
+                                <th scope="row">
+                                    성명<span class="required-mark">＊</span>
+                                </th>
+                                <td>
+                                    <div class="form-input">
+                                        <input type="text" title="text" value="홍길동" disabled="">
+                                    </div>
+                                </td>
+                                <th scope="row">
+                                    사용 여부<span class="required-mark">＊</span>
+                                </th>
+                                <td>
+                                    <div class="form-radio">
+                                        <div class="form-radio__box">
+                                            <input type="radio" id="r-1" name="test1" checked="">
+                                            <label for="r-1">Yes</label>
+                                        </div>
+                                        <div class="form-radio__box">
+                                            <input type="radio" id="r-2" name="test1">
+                                            <label for="r-2">No</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    원소속 기관
+                                </th>
+                                <td>
+                                    <div class="form-input">
+                                        <input type="text" title="text">
+                                    </div>
+                                </td>
+                                <th scope="row">
+                                    근무소속기관
+                                </th>
+                                <td>
+                                    <div class="form-input">
+                                        <input type="text" title="text">
+                                    </div>
+                                </td>
+                                <th scope="row">
+                                    기관장 여부
+                                </th>
+                                <td>
+                                    <div class="form-radio">
+                                        <div class="form-radio__box">
+                                            <input type="radio" id="r-3" name="test2" checked="">
+                                            <label for="r-3">Yes</label>
+                                        </div>
+                                        <div class="form-radio__box">
+                                            <input type="radio" id="r-4" name="test2">
+                                            <label for="r-4">No</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    원소속 발령일자
+                                </th>
+                                <td>
+                                    <div class="form-input">
+                                        <input type="text" title="text" value="2022.12.01">
+                                    </div>
+                                </td>
+                                <th scope="row">
+                                    직위
+                                </th>
+                                <td>
+                                    <div class="form-input">
+                                        <input type="text" title="text">
+                                    </div>
+                                </td>
+                                <th scope="row">
+                                    직책
+                                </th>
+                                <td>
+                                    <div class="form-input">
+                                        <input type="text" title="text">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="realgrid" class="grid-wrap"></div>
+                <div class="grid-page-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="./js/jquery-3.7.1.min.js"></script><!-- 제이쿼리 -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-datepicker.min.js"></script>
+    <script src="./js/bootstrap-select.js"></script>
+    <!-- <script src="./js/jquery.nice-select.min.js"></script> -->
+    <script src="./js/layout.js"></script>
+    <script src="./js/ui.js"></script>
+    <script>
+        //달력
+        $('.form-date input').datepicker({
+            format: 'yyyy.mm', //데이터 포맷 형식(yyyy : 년 mm : 월 dd : 일 )
+            //startDate: '-10d', //달력에서 선택 할 수 있는 가장 빠른 날짜. 이전으로는 선택 불가능 ( d : 일 m : 달 y : 년 w : 주)
+            endDate: '+10d', //달력에서 선택 할 수 있는 가장 느린 날짜. 이후로 선택 불가 ( d : 일 m : 달 y : 년 w : 주)
+            autoclose: true, //사용자가 날짜를 클릭하면 자동 캘린더가 닫히는 옵션
+            calendarWeeks: false, //캘린더 옆에 몇 주차인지 보여주는 옵션 기본값 false 보여주려면 true
+            clearBtn: false, //날짜 선택한 값 초기화 해주는 버튼 보여주는 옵션 기본값 false 보여주려면 true
+            datesDisabled: ['2019.06', '2019.10'], //선택 불가능한 일 설정 하는 배열 위에 있는 format 과 형식이 같아야함.
+            //daysOfWeekDisabled: [0, 6], //선택 불가능한 요일 설정 0 : 일요일 ~ 6 : 토요일
+            //daysOfWeekHighlighted: [3], //강조 되어야 하는 요일 설정
+            disableTouchKeyboard: false, //모바일에서 플러그인 작동 여부 기본값 false 가 작동 true가 작동 안함.
+            immediateUpdates: false, //사용자가 보는 화면으로 바로바로 날짜를 변경할지 여부 기본값 :false
+            multidate: false, //여러 날짜 선택할 수 있게 하는 옵션 기본값 :false
+            multidateSeparator: ',', //여러 날짜를 선택했을 때 사이에 나타나는 글짜 2019-05-01,2019-06-01
+            templates: {
+                leftArrow: '&laquo;',
+                rightArrow: '&raquo;',
+            }, //다음달 이전달로 넘어가는 화살표 모양 커스텀 마이징
+            showWeekDays: true, // 위에 요일 보여주는 옵션 기본값 : true
+            //title: '테스트', //캘린더 상단에 보여주는 타이틀
+            todayHighlight: true, //오늘 날짜에 하이라이팅 기능 기본값 :false
+            toggleActive: true, //이미 선택된 날짜 선택하면 기본값 : false인경우 그대로 유지 true인 경우 날짜 삭제
+            weekStart: 0, //달력 시작 요일 선택하는 것 기본값은 0인 일요일
+            language: 'ko', //달력의 언어 선택, 그에 맞는 js로 교체해줘야한다.
+            startView: 1, //달력의 모드 1일경우 달을 먼저 보여줌 0:일, 1:월, 2:년
+            minViewMode: 1 // 최소 선택 모드 1일경우 일자 선택을 보여 주지 않음 0:일, 1:월, 2:년
+        })
+            .on('changeDate', function (e) {
+                /* 이벤트의 종류 */
+                //show : datePicker가 보이는 순간 호출
+                //hide : datePicker가 숨겨지는 순간 호출
+                //clearDate: clear 버튼 누르면 호출
+                //changeDate : 사용자가 클릭해서 날짜가 변경되면 호출 (개인적으로 가장 많이 사용함)
+                //changeMonth : 월이 변경되면 호출
+                //changeYear : 년이 변경되는 호출
+                //changeCentury : 한 세기가 변경되면 호출 ex) 20세기에서 21세기가 되는 순간
+
+                console.log(e);
+                // e.date를 찍어보면 Thu Jun 27 2019 00:00:00 GMT+0900 (한국 표준시) 위와 같은 형태로 보인다.
+            });
+
+        // 리얼그리드
+        var fields = [
+            {
+                fieldName: "KorName",
+                dataType: "text"
+            },
+            {
+                fieldName: "Gender",
+                dataType: "text"
+            },
+            {
+                fieldName: "Age",
+                dataType: "number"
+            },
+            {
+                fieldName: "Phone",
+                dataType: "text"
+            },
+            {
+                fieldName: "ProductId",
+                dataType: "text"
+            },
+            {
+                fieldName: "KorCountry",
+                dataType: "text"
+            },
+            {
+                fieldName: "OrderDate",
+                dataType: "datetime",
+                datetimeFormat: "yyyy.MM.dd",
+                amText: "오전",
+                pmText: "오후"
+            },
+            {
+                fieldName: "CardNumber",
+                dataType: "text"
+            },
+            {
+                fieldName: "Monetary",
+                dataType: "text"
+            },
+            {
+                fieldName: "StartDate",
+                dataType: "datetime",
+                datetimeFormat: "yyyy.MM.dd",
+                amText: "오전",
+                pmText: "오후"
+            },
+            {
+                fieldName: "EndDate",
+                dataType: "datetime",
+                datetimeFormat: "yyyy.MM.dd",
+                amText: "오전",
+                pmText: "오후"
+            },
+            {
+                fieldName: "ToMonth",
+                dataType: "number"
+            },
+            {
+                fieldName: "Month",
+                dataType: "number"
+            },
+            {
+                fieldName: "Year",
+                dataType: "number"
+            },
+            {
+                fieldName: "InterestRate",
+                dataType: "number"
+            },
+            {
+                fieldName: "SaveCost",
+                dataType: "number"
+            },
+            {
+                fieldName: "SaveMaturity",
+                dataType: "number"
+            },
+            {
+                fieldName: "CurrentSave",
+                dataType: "number"
+            }
+        ];
+
+        var columns = [
+            {
+                name: "KorName",
+                fieldName: "KorName",
+                width: "80",
+                styleName: "type-underline",
+                header: {
+                    text: "이름"
+                }
+            },
+            {
+                name: "Gender",
+                fieldName: "Gender",
+                width: "60",
+                header: {
+                    text: "성별"
+                }
+            },
+            {
+                name: "Age",
+                fieldName: "Age",
+                width: "60",
+                header: {
+                    text: "나이"
+                },
+                styleName: "right-column"
+            },
+            {
+                name: "Phone",
+                fieldName: "Phone",
+                width: "200",
+                header: {
+                    text: "전화번호"
+                }
+            },
+            {
+                name: "KorCountry",
+                fieldName: "KorCountry",
+                width: "200",
+                header: {
+                    text: "투자국가"
+                }
+            },
+            {
+                name: "OrderDate",
+                fieldName: "OrderDate",
+                datetimeFormat: "yyyy.MM.dd",
+                width: "100",
+                header: {
+                    text: "주문일자"
+                }
+            },
+            {
+                name: "CardNumber",
+                fieldName: "CardNumber",
+                width: "240",
+                header: {
+                    text: "카드번호"
+                }
+            },
+            {
+                name: "Monetary",
+                fieldName: "Monetary",
+                width: "40",
+                header: {
+                    text: "통화"
+                }
+            },
+            {
+                name: "StartDate",
+                fieldName: "StartDate",
+                datetimeFormat: "yyyy.MM.dd",
+                width: "100",
+                header: {
+                    text: "최초납입일"
+                }
+            },
+            {
+                name: "EndDate",
+                fieldName: "EndDate",
+                datetimeFormat: "yyyy.MM.dd",
+                width: "100",
+                header: {
+                    text: "종료일"
+                }
+            },
+            {
+                name: "ToMonth",
+                fieldName: "ToMonth",
+                width: "100",
+                header: {
+                    text: "납입 횟수"
+                },
+                styleName: "right-column"
+            },
+            {
+                name: "Month",
+                fieldName: "Month",
+                width: "100",
+                header: {
+                    text: "남은 횟수"
+                },
+                styleName: "right-column"
+            },
+            {
+                name: "InterestRate",
+                fieldName: "InterestRate",
+                width: "50",
+                numberFormat: "0.00",
+                header: {
+                    text: "이율"
+                },
+                styleName: "right-column"
+            },
+            {
+                name: "SaveCost",
+                fieldName: "SaveCost",
+                width: "80",
+                numberFormat: "#,##0",
+                header: {
+                    text: "납입금"
+                },
+                styleName: "right-column"
+            },
+            {
+                name: "SaveMaturity",
+                fieldName: "SaveMaturity",
+                width: "80",
+                numberFormat: "#,##0",
+                header: {
+                    text: "만기금액"
+                },
+                styleName: "right-column"
+            },
+            {
+                name: "CurrentSave",
+                fieldName: "CurrentSave",
+                width: "80",
+                numberFormat: "#,##0",
+                header: {
+                    text: "현재잔액"
+                },
+                styleName: "right-column"
+            }
+        ];
+
+        var httpRequest;
+
+        function setProvider(filename) {
+            httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = loadData;
+            httpRequest.open("GET", "./js/" + filename);
+            httpRequest.send();
+        }
+
+        function loadData() {
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    var data = JSON.parse(httpRequest.responseText);
+                    dataProvider.setRows(data);
+                    setPaging();
+                }
+            }
+        }
+
+        var dataProvider, gridContainer, grid;
+
+        function createGrid(container) {
+            dataProvider = new RealGrid.LocalDataProvider();
+            gridView = new RealGrid.GridView(container);
+
+            gridView.setDataSource(dataProvider);
+            dataProvider.setFields(fields);
+            gridView.setColumns(columns);
+
+            gridView.displayOptions.emptyMessage = "표시할 데이타가 없습니다.";
+            gridView.displayOptions.rowHeight = 36;
+            gridView.header.height = 36;
+            gridView.footer.height = 36;
+            gridView.stateBar.width = 30;
+            gridView.checkBar.width = 30;
+            gridView.editOptions.insertable = true;
+            gridView.editOptions.appendable = true;
+
+
+            setProvider("simple_data300.json");
+        }
+
+        function start() {
+            createGrid("realgrid");
+        }
+
+        // $.document.ready(start);
+        window.onload = start;
+        // domloaded를 대신 써도 됩니다.
+
+        window.onunload = function () {
+            dataProvider.clearRows();
+
+            gridView.destroy();
+            dataProvider.destroy();
+
+            gridView = null;
+            dataProvider = null;
+        };
+
+        function setPaging() {
+            var totalData = dataProvider.getRowCount();    // 총 데이터 수
+            var dataPerPage = 8;    // 한 페이지에 나타낼 데이터 수
+            var pageCount = 3;        // 한 화면에 나타낼 페이지 수
+
+            gridView.setPaging(true, dataPerPage);
+            paging(totalData, dataPerPage, pageCount, 1);
+        }
+
+        function paging(totalData, dataPerPage, pageCount, currentPage) {
+            console.log("currentPage : " + currentPage);
+
+            var totalPage = Math.ceil(totalData / dataPerPage);    // 총 페이지 수
+            var pageGroup = Math.ceil(currentPage / pageCount);    // 페이지 그룹
+
+            console.log("pageGroup : " + pageGroup);
+
+            var last = pageGroup * pageCount;    // 화면에 보여질 마지막 페이지 번호
+            if (last > totalPage)
+                last = totalPage;
+            var first = last - (pageCount - 1) < 1 ? 1 : last - (pageCount - 1)   // 화면에 보여질 첫번째 페이지 번호
+            var next = last + 1;
+            var prev = first - 1;
+
+            console.log("last : " + last);
+            console.log("first : " + first);
+            console.log("next : " + next);
+            console.log("prev : " + prev);
+
+            var $pingingView = $(".grid-page-box");
+
+            var html = "";
+
+            if (prev === 0) {
+                html += "<button type='button' class='grid-first-btn' data-page='first' disabled>처음으로</button>";
+                html += "<button type='button' class='grid-prev-btn' data-page='prev' disabled>이전</button>";
+            } else {
+                html += "<button type='button' class='grid-first-btn' data-page='first'>처음으로</button>";
+                html += "<button type='button' class='grid-prev-btn' data-page='prev'>이전</button>";
+            }
+
+
+            for (var i = first; i <= last; i++) {
+                html += "<button type='button' class='grid-page-btn' data-page='" + i + "'>" + i + "</button>";
+            }
+
+            if (last < totalPage) {
+                html += "<button type='button' class='grid-next-btn' data-page='next'>다음</button>";
+                html += "<button type='button' class='grid-last-btn' data-page='last'>마지막으로</button>";
+            } else {
+                html += "<button type='button' class='grid-next-btn' data-page='next' disabled>다음</button>";
+                html += "<button type='button' class='grid-last-btn' data-page='last' disabled>마지막으로</button>";
+            }
+
+            $pingingView.html(html);    // 페이지 목록 생성
+
+            $(".grid-page-box button[data-page='" + currentPage + "']").addClass('current-page');    // 현재 페이지 표시
+
+            $(".grid-page-box button").click(function (event) {
+                event.preventDefault();
+
+                var $item = $(this);
+                var $data = $item.attr("data-page");
+                var selectedPage = $item.text();
+
+
+                if ($data === "first") selectedPage = 1;
+                if ($data === "next") selectedPage = next;
+                if ($data === "prev") selectedPage = prev < 1 ? 1 : prev
+                if ($data === "last") selectedPage = totalPage;
+
+                gridView.setPage(selectedPage - 1);
+                paging(totalData, dataPerPage, pageCount, selectedPage);
+            });
+
+        }
+
+        //rmate
+        // -----------------------차트 설정 시작-----------------------
+
+        // rMateChart 를 생성합니다.
+        // 파라메터 (순서대로)
+        //  1. 차트의 id ( 임의로 지정하십시오. )
+        //  2. 차트가 위치할 div 의 id (즉, 차트의 부모 div 의 id 입니다.)
+        //  3. 차트 생성 시 필요한 환경 변수들의 묶음인 chartVars
+        //  4. 차트의 가로 사이즈 (생략 가능, 생략 시 100%)
+        //  5. 차트의 세로 사이즈 (생략 가능, 생략 시 100%)
+        rMateChartH5.create("chart1", "chartHolder", "", "100%", "100%");
+
+        // 스트링 형식으로 레이아웃 정의.
+        var layoutStr =
+            '<rMateChart backgroundColor="#FFFFFF" borderStyle="none">'
+            + '<NumberFormatter id="numFmt" useThousandsSeparator="true"/>'
+            + '<Stroke id="stroke1" color="#f6a54c" weight="1"/>'
+            + '<Stroke id="stroke2" color="#5587a2" weight="1"/>'
+            + '<Line2DChart showDataTips="true" >'
+            + '<verticalAxis>'
+            + '<LinearAxis id="vAxis" formatter="{numFmt}"/>'
+            + '</verticalAxis>'
+            + '<horizontalAxis>'
+            + '<CategoryAxis categoryField="Month"/>'
+            + '</horizontalAxis>'
+            + '<series>'
+            + '<Line2DSeries labelPosition="up" yField="Data6" radius="4" displayName="Revenue" itemRenderer="CircleItemRenderer">'
+            + '<lineStroke>'
+            + '<Stroke color="#5587a2" weight="3"/>'
+            + '</lineStroke>'
+            + '<fill>'
+            + '<SolidColor color="#5587a2"/>'
+            + '</fill>'
+            + '<showDataEffect>'
+            + '<SeriesInterpolate/>'
+            + '</showDataEffect>'
+            + '</Line2DSeries>'
+            + '<Line2DSeries labelPosition="up" yField="Data5" radius="4" displayName="Revenue" itemRenderer="CircleItemRenderer">'
+            + '<lineStroke>'
+            + '<Stroke color="#f6a54c" weight="3"/>'
+            + '</lineStroke>'
+            + '<fill>'
+            + '<SolidColor color="#f6a54c"/>'
+            + '</fill>'
+            + '<verticalAxis>'
+            + '<LinearAxis id="vAxis2" formatter="{numFmt}"/>'
+            + '</verticalAxis>'
+            + '<showDataEffect>'
+            + '<SeriesInterpolate/>'
+            + '</showDataEffect>'
+            + '</Line2DSeries>'
+            + '</series>'
+            + '<verticalAxisRenderers>'
+            + '<Axis2DRenderer axis="{vAxis}" placement="left" showLine="true">'
+            + '<axisStroke>'
+            + '<Stroke color="#5587a2" weight="2"/>'
+            + '</axisStroke>'
+            + '</Axis2DRenderer>'
+            + '<Axis2DRenderer axis="{vAxis2}" placement="right" showLine="true">'
+            + '<axisStroke>'
+            + '<Stroke color="#f6a54c" weight="2"/>'
+            + '</axisStroke>'
+            + '</Axis2DRenderer>'
+            + '</verticalAxisRenderers>'
+            + '<backgroundElements>'
+            + '<GridLines/>'
+            + '<AxisMarker>'
+            + '<lines>'
+            /* AxisLine은 backgroundElements, annotationElements에 사용하여 차트내에 선을 그을 수 있는 기능입니다. */
+            /* startValue : 표시하려는 선이 사선일 경우 라인이 시작되는 위치 값 */
+            /* endValue : 표시하려는 선이 사선일 경우 라인이 끝나는 위치 값 */
+            /* label : 표시하려는 선에 넣을 라벨 */
+            /* labelAlign : 라인에 표시할 라벨의 수평 정렬 */
+            /* labelRotation : 표시할 라벨의 회전 */
+            /* linePosition : CategoryAxis의 경우 라인을 표시할 위치 center | left | right */
+            /* labelUpDown : 라벨을 라인의 위에 표시할지 아래에 표시할지 여부 */
+            /* stroke : 라인의 스타일을 설정 합니다. */
+            /* value : 표시하려는 선이 사선이 아닌경우 라인이 표시될 값 */
+            /* horizontal : 수평라인 여부 false라면 수직 라인을 그리게 됩니다. */
+            /* axis : AxisLinde이 참조할 축을 설정 합니다. */
+            + '<AxisLine value="400" label="Left Axis 400" labelAlign="left" stroke="{stroke2}"/>'
+            /* axis 의 기본 축은 좌측 1번째 축 입니다. */
+            + '<AxisLine axis="{vAxis2}" value="400" label="Right Axis 400" labelAlign="right" stroke="{stroke1}"/>'
+            + '</lines>'
+            + '<ranges>'
+            /* AxisRange는 backgroundElements, annotationElements에 사용하여 차트내에 범위를 설정할 수 있는 기능입니다. */
+            /* startValue : 표시하려는 범위의 시작 위치 값 */
+            /* endValue : 표시하려는 범위의 종료 위치 값 */
+            /* label : 표시하려는 영역에 넣을 라벨 */
+            /* labelRotation : 표시할 라벨의 회전 */
+            /* labelHorizontalAlign : 범위에 표시할 라벨의 수평정렬 */
+            /* labelVerticalAlign : 범위에 표시할 라벨의 수직정렬 */
+            /* fill : 범위안을 채울 스타일을 설정 합니다. */
+            /* horizontal : 수평라인 여부 false라면 수직 라인을 그리게 됩니다. */
+            /* axis : AxisLinde이 참조할 축을 설정 합니다. */
+            + '<AxisRange startValue="1200" endValue="1400" label="Left Axis" labelHorizontalAlign="left">'
+            + '<fill>'
+            + '<SolidColor color="#eef3f6" />'
+            + '</fill>'
+            + '</AxisRange>'
+            + '<AxisRange axis="{vAxis2}" startValue="1200" endValue="1400" label="Right Axis" labelHorizontalAlign="right">'
+            + '<fill>'
+            + '<SolidColor color="#fef2e4"/>'
+            + '</fill>'
+            + '</AxisRange>'
+            + '</ranges>'
+            + '</AxisMarker>'
+            + '</backgroundElements>'
+            + '</Line2DChart>'
+            + '</rMateChart>';
+
+        // 차트 데이터
+        var chartData = [{ "Month": "Jan", "Data1": 1000, "Data2": 1500, "Data3": 2300, "Data4": 900, "Data5": 1560, "Data6": 1700, "Data7": 1110, "Data8": 1300, "Data9": 1200 },
+        { "Month": "Feb", "Data1": 1400, "Data2": 1900, "Data3": 1200, "Data4": 2300, "Data5": 880, "Data6": 1780, "Data7": 1120, "Data8": 990, "Data9": 1700 },
+        { "Month": "Mar", "Data1": 1500, "Data2": 1200, "Data3": 1600, "Data4": 2300, "Data5": 740, "Data6": 1990, "Data7": 1320, "Data8": 1100, "Data9": -1560 },
+        { "Month": "Apr", "Data1": 1900, "Data2": 1300, "Data3": 1300, "Data4": 2300, "Data5": 590, "Data6": 2200, "Data7": 2110, "Data8": 1500, "Data9": -1770 },
+        { "Month": "May", "Data1": 1400, "Data2": 900, "Data3": 1000, "Data4": 2300, "Data5": 1200, "Data6": 900, "Data7": 1700, "Data8": 1500, "Data9": -500 },
+        { "Month": "Jun", "Data1": 2000, "Data2": 1000, "Data3": 1200, "Data4": 2300, "Data5": 660, "Data6": 1500, "Data7": 1430, "Data8": 1500, "Data9": 2200 }];
+
+        // rMateChartH5.calls 함수를 이용하여 차트의 준비가 끝나면 실행할 함수를 등록합니다.
+        //
+        // argument 1 - rMateChartH5.create시 설정한 차트 객체 아이디 값
+        // argument 2 - 차트준비가 완료되면 실행할 함수 명(key)과 설정될 전달인자 값(value)
+        // 
+        // 아래 내용은 
+        // 1. 차트 준비가 완료되면 첫 전달인자 값을 가진 차트 객체에 접근하여
+        // 2. 두 번째 전달인자 값의 key 명으로 정의된 함수에 value값을 전달인자로 설정하여 실행합니다.
+        rMateChartH5.calls("chart1", {
+            "setLayout": layoutStr,
+            "setData": chartData
+        });
+
+        // -----------------------차트 설정 끝 -----------------------
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g>
+        <path d="m112 112 .574 9.236a.925.925 0 0 0 .919.924h5.284a.927.927 0 0 0 .919-.924l.574-9.236" transform="translate(-108.136 -107.764)" style="stroke:#303038;stroke-linecap:round;stroke-width:1.2px;fill:none;stroke-linejoin:round"/>
+        <path transform="translate(2.5 4.229)" style="stroke-miterlimit:10;stroke:#303038;stroke-linecap:round;stroke-width:1.2px" d="M0 0h11"/>
+        <path d="M192 50.236v-1.4h0a.836.836 0 0 1 .839-.839h2.8a.836.836 0 0 1 .839.839h0v1.4" transform="translate(-186.236 -46)" style="stroke:#303038;stroke-linecap:round;stroke-width:1.2px;fill:none;stroke-linejoin:round"/>
+        <path transform="translate(8 6.5)" style="stroke:#303038;stroke-linecap:round;stroke-width:1.2px;fill:none;stroke-linejoin:round" d="M0 0v5.998"/>
+        <path transform="translate(6.167 6.5)" style="stroke:#303038;stroke-linecap:round;stroke-width:1.2px;fill:none;stroke-linejoin:round" d="M0 0v5.998"/>
+        <path transform="translate(9.833 6.5)" style="stroke:#303038;stroke-linecap:round;stroke-width:1.2px;fill:none;stroke-linejoin:round" d="M0 0v5.998"/>
+    </g>
+</svg>

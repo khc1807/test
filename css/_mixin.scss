@@ -1,0 +1,162 @@
+$imageUrl: '../images/';
+
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+@mixin hidden {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: -1;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+@mixin blind {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+@mixin text-over($line : 1) {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+
+  @if $line==1 {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+
+}
+
+@mixin posX {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin posY {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin posXY {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin focusCSS {
+  // outline: 4px;
+  // outline-offset: -4px;
+  // border:1px dashed #818181;
+  outline: dashed 1px #818181 !important;
+}
+
+@mixin focusStyle {
+  &:focus {
+    @include focusCSS;
+  }
+}
+
+@mixin icoArr($size, $color, $dir) {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: $size;
+  height: $size;
+  margin-top: -($size / 2);
+  border: solid 1px $color;
+  border-top: 0;
+  border-right: 0;
+
+  @if $dir==down {
+    transform: rotate(-45deg);
+  } @else if $dir==next {
+    right: 0;
+    transform: rotate(-135deg);
+  } @else if $dir==prev {
+    left: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@mixin txtColor($color, $opacity) {
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+  color: rgba($red, $green, $blue, $opacity);
+}
+
+@mixin bgColor($color, $opacity) {
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+  background-color: rgba($red, $green, $blue, $opacity);
+}
+
+@mixin icoDel($size, $bg: black) {
+  content: '';
+  display: block;
+  width: $size;
+  height: $size;
+
+  @if $bg==black {
+    background: url($imageUrl + 'common/ico_close_black.svg') no-repeat 0 0 / 100% auto;
+  } @else if $bg==white {
+    background: url($imageUrl + 'common/ico_close.svg') no-repeat 0 0 / 100% auto;
+  }
+}
+
+@mixin icoX($width : 1px, $height: 10px, $bg: #000, $rotate : 45deg) {
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    content: '';
+    width: $width;
+    height: $height;
+    margin-top: -($height / 2);
+
+    @if $width !=1px {
+      margin-left: -($width / 2);
+    }
+
+    background-color: $bg;
+    @content;
+  }
+
+  &:before {
+    transform: rotate($rotate);
+  }
+
+  &:after {
+    @if $rotate==0 {
+      transform: rotate(90deg);
+    } @else {
+      transform: rotate(-$rotate);
+    }
+  }
+
+}
