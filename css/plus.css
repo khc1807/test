@@ -664,8 +664,6 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-  color: #111;
-  text-decoration: none;
 }
 .lnb__menu-box__list-box__list-line__list-link:before {
   content: "";

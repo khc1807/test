@@ -9,7 +9,10 @@
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap-datepicker3.min.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap-select.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./css/nice-select.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/ui.dynatree.css">
+    <link rel="stylesheet" type="text/css" href="./css/fancy_fileupload.css">
+    <link rel="stylesheet" type="text/css" href="./css/jodit.min.css">
     <link href="./css/realgrid-style.css" rel="stylesheet" />
     <script src="./js/realgrid.2.8.0.min.js"></script>
     <!--리얼그리드 라이센스 -->
@@ -24,15 +27,15 @@
     <script type="text/javascript" src="./rMateChartH5/JS/rMateChartH5.js"></script>
 
     <!-- rMateChartH5 테마 js -->
-    <script type="text/javascript" src="./rMateChartH5/Assets/Theme/theme.js"></script>
+    <!-- <script type="text/javascript" src="./rMateChartH5/Assets/Theme/theme.js"></script> -->
     <!-- 샘플 작동을 위한 css와 js -->
-    <script type="text/javascript" src="./rMateChartH5//Web/JS/common.js"></script>
-    <script type="text/javascript" src="./rMateChartH5//Web/JS/sample_util.js"></script>
+    <!-- <script type="text/javascript" src="./rMateChartH5//Web/JS/common.js"></script>
+    <script type="text/javascript" src="./rMateChartH5//Web/JS/sample_util.js"></script> -->
     <!-- <link rel="stylesheet" type="text/css" href="./rMateChartH5//Web/sample.css" /> -->
 
     <!-- SyntaxHighlighter -->
-    <script type="text/javascript" src="./rMateChartH5//Web/syntax/shCore.js"></script>
-    <script type="text/javascript" src="./rMateChartH5//Web/syntax/shBrushJScript.js"></script>
+    <!-- <script type="text/javascript" src="./rMateChartH5//Web/syntax/shCore.js"></script>
+    <script type="text/javascript" src="./rMateChartH5//Web/syntax/shBrushJScript.js"></script> -->
     <!-- <link type="text/css" rel="stylesheet" href="./rMateChartH5//Web/syntax/shCoreDefault.css" /> -->
 </head>
 <style>
@@ -63,7 +66,7 @@
                     </div>
                     <div class="content__title__breadcrumb">
                         <span>Home</span>
-                        <span>금1감원상시지표</span>
+                        <span>금감원상시지표</span>
                         <span>모집관리</span>
                         <span>불완전판매율</span>
                     </div>
@@ -92,7 +95,7 @@
                         <span class="content__search-box__label">기관코드(명)</span>
                         <input type="text" title="text" disabled>
                     </div>
-                    <div class="form-select type-search-box">
+                    <div class="ss-form-select type-search-box">
                         <span class="content__search-box__label">테스트샘플</span>
                         <select title="미선택" class="selectpicker">
                             <option>Mustard</option>
@@ -101,7 +104,7 @@
                             <option>긴내용이들어가있는경우확인용</option>
                         </select>
                     </div>
-                    <div class="form-select type-search-box">
+                    <div class="ss-form-select type-search-box">
                         <span class="content__search-box__label">테스트샘플</span>
                         <select title="미선택" class="selectpicker" disabled>
                             <option>Mustard</option>
@@ -134,8 +137,8 @@
                             </div>
                         </div>
                         <div class="content__search-box__last-line-box__btn-box">
-                            <button type="button" class="white-btn">
-                                <span>관하상세</span>
+                            <button type="button" class="white-btn"  data-aim="target1">
+                                <span>팝업</span>
                             </button>
                             <button type="button" class="black-btn">
                                 <span>조회</span>
@@ -265,13 +268,133 @@
                 </div>
                 <div id="realgrid" class="grid-wrap"></div>
                 <div class="grid-page-box"></div>
+                <div class="grid-title-wrap">
+                    <div class="grid-title-wrap__title-box">
+                        <strong class="grid-title-wrap__title-box__total-guide">공지사항</strong>
+                    </div>
+                    <div class="grid-title-wrap__btn-box">
+                        <button type="button" class="icon-btn type-preview">
+                            <span>미리보기</span>
+                        </button>
+                        <button type="button" class="icon-btn type-save">
+                            <span>저장</span>
+                        </button>
+                        <button type="button" class="icon-btn type-delete">
+                            <span>취소</span>
+                        </button>
+                        <button type="button" class="icon-btn type-list">
+                            <span>목록</span>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="table-wrap">
+                    <table>
+                        <colgroup>
+                            <col style="width:190px">
+                            <col>
+                            <col style="width:190px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    시스템 관리자
+                                </th>
+                                <td colspan="3">
+                                    <div class="form-input type-full">
+                                        <input type="text" title="text" value="2023.10.30" disabled>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    제목<span class="required-mark">＊</span>
+                                </th>
+                                <td colspan="3">
+                                    <div class="form-input type-full">
+                                        <input type="text" title="text">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    팝업 공지 기간
+                                </th>
+                                <td>
+                                    <div class="form-date">
+                                        <input type="text" title="date" value="2023.01">
+                                    </div>
+                                    ~
+                                    <div class="form-date">
+                                        <input type="text" title="date" value="2023.01">
+                                    </div>
+                                </td>
+                                <th scope="row">
+                                    팝업 사이즈
+                                </th>
+                                <td>
+                                    Width
+                                    <div class="form-input">
+                                        <input type="text" title="text">
+                                    </div>
+                                    Height
+                                    <div class="form-input">
+                                        <input type="text" title="text">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <div class="form-file">
+                    <input type="file" title="file-upload" name="files[]" multiple />
+                </div>
+    
+                <div class="form-editor">
+                    <textarea title="텍스트 에디터" id="editor" rows="50" cols="50"></textarea>
+                </div>
+    
             </div>
         </div>
     </div>
-
     <footer></footer>
-    <script src="./js/jquery-3.7.1.min.js"></script><!-- 제이쿼리 -->
-    <script src="./js/bootstrap.min.js"></script>
+    <div class="layer" data-target="target1">
+        <div class="layer__wrap" data-action="drag">
+            <div class="layer__title">
+                <p>메뉴 리스트1</p>
+                <button type="button" class="layer__close-btn" data-action="layer-close">
+                    <span>레이어 닫기</span>
+                </button>
+            </div>
+            <div class="layer__contents">
+                <div class="tree-wrap">
+                    <div class="tree-box"></div>
+                </div>
+            </div>
+            <div class="layer__btn-box">
+                <button type="button" class="black-btn">
+                    <span>추가</span>
+                </button>
+                <button type="button" class="white-btn" data-action="layer-close">
+                    <span>닫기</span>
+                </button>
+            </div>
+        </div>
+        <button type="button" class="layer__dim-btn" data-action="layer-close">
+            <span>레이어 닫기</span>
+        </button>
+    </div>
+    <script src="./js/jquery.min.js"></script><!-- 제이쿼리 -->
+    <script src="./js/jquery-ui.min.js"></script><!-- 제이쿼리 -->
+    <script src="./js/jquery.cookies.js"></script><!-- 제이쿼리 -->
+    <script src="./js/jquery.dynatree.min.js"></script><!-- 메뉴 트리 -->
+    <script src="./js/jquery.fancy-fileupload.js"></script><!-- 파입 업로드 -->
+    <script src="./js/jquery.fileupload.js"></script><!-- 파일 업로드 -->
+    <script src="./js/jquery.iframe-transport.js"></script><!-- 제이쿼리 -->
+    <script src="./js/jodit.js"></script><!-- 게시판 -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/bootstrap-datepicker.min.js"></script>
     <script src="./js/bootstrap-select.js"></script>
     <!-- <script src="./js/jquery.nice-select.min.js"></script> -->
@@ -821,6 +944,40 @@
         });
 
         // -----------------------차트 설정 끝 -----------------------
+
+        // 메뉴 트리
+        $(".tree-box").dynatree({
+        onActivate: function (dtnode) {
+            // A DynaTreeNode object is passed to the activation handler
+            // Note: we also get this event, if persistence is on, and the page is reloaded.
+            // alert("You activated " + dtnode.data.title);
+        },
+        persist: true,
+        children: [ // Pass an array of nodes.
+            {title: "Item 1"},
+            {
+                title: "Folder 2", isFolder: true,
+                children: [
+                    {title: "Sub-item 2.1"},
+                    {title: "Sub-item 2.2"}
+                ]
+            },
+            {title: "Item 3"}
+        ]
+    });
+
+    // 파입 업로드
+    $('.form-file input').FancyFileUpload({
+        params : {
+            action : 'fileuploader'
+        },
+        maxfilesize : 1000000
+    });
+
+    // 에디터
+    const editor = Jodit.make('#editor' ,{
+        minHeight:400
+    });
     </script>
 </body>
 
