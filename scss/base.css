@@ -1,87 +1,38 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "SamsungOneKorean 200";
-  src: url("../fonts/SamsungOneKorean-200.woff2") format("woff2"), url("../fonts/SamsungOneKorean-200.woff") format("woff");
-  font-weight: 300;
+  font-family: "Noto Sans KR";
   font-style: normal;
+  font-weight: 200;
   font-display: swap;
+  src: url("../fonts/NotoSansCJKkr-Regular.woff2") format("woff2"), url("../fonts/NotoSansCJKkr-Regular.woff") format("woff");
 }
 @font-face {
-  font-family: "SamsungOneKorean 200C";
-  src: url("../fonts/SamsungOneKorean-200C.woff2") format("woff2"), url("../fonts/SamsungOneKorean-200C.woff") format("woff");
-  font-weight: 300;
+  font-family: "Noto Sans KR";
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SamsungOneKorean 300";
-  src: url("../fonts/SamsungOneKorean-300.woff2") format("woff2"), url("../fonts/SamsungOneKorean-300.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SamsungOneKorean 400";
-  src: url("../fonts/SamsungOneKorean-400.woff2") format("woff2"), url("../fonts/SamsungOneKorean-400.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SamsungOneKorean 300C";
-  src: url("../fonts/SamsungOneKorean-300C.woff2") format("woff2"), url("../fonts/SamsungOneKorean-300C.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SamsungOneKorean 400C";
-  src: url("../fonts/SamsungOneKorean-400C.woff2") format("woff2"), url("../fonts/SamsungOneKorean-400C.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SamsungOneKorean 500";
-  src: url("../fonts/SamsungOneKorean-500.woff2") format("woff2"), url("../fonts/SamsungOneKorean-500.woff") format("woff");
   font-weight: 500;
-  font-style: normal;
   font-display: swap;
+  src: url("../fonts/NotoSansCJKkr-Medium.woff2") format("woff2"), url("../fonts/NotoSansCJKkr-Medium.woff") format("woff");
 }
 @font-face {
-  font-family: "SamsungOneKorean 500C";
-  src: url("../fonts/SamsungOneKorean-500C.woff2") format("woff2"), url("../fonts/SamsungOneKorean-500C.woff") format("woff");
-  font-weight: 500;
+  font-family: "Noto Sans KR";
   font-style: normal;
+  font-weight: 600;
   font-display: swap;
+  src: url("../fonts/NotoSansCJKkr-Bold.woff2") format("woff2"), url("../fonts/NotoSansCJKkr-Bold.woff") format("woff");
 }
 @font-face {
-  font-family: "SamsungOneKorean 600";
-  src: url("../fonts/SamsungOneKorean-600.woff2") format("woff2"), url("../fonts/SamsungOneKorean-600.woff") format("woff");
-  font-weight: normal;
+  font-family: "Pretendard";
   font-style: normal;
+  font-weight: 400;
   font-display: swap;
+  src: url("../fonts/Pretendard-Regular.woff2") format("woff2"), url("../fonts/Pretendard-Regular.woff") format("woff");
 }
 @font-face {
-  font-family: "SamsungOneKorean 600C";
-  src: url("../fonts/SamsungOneKorean-600C.woff2") format("woff2"), url("../fonts/SamsungOneKorean-600C.woff") format("woff");
-  font-weight: normal;
+  font-family: "Pretendard";
   font-style: normal;
+  font-weight: 600;
   font-display: swap;
-}
-@font-face {
-  font-family: "SamsungOneKorean 700";
-  src: url("../fonts/SamsungOneKorean-700.woff2") format("woff2"), url("../fonts/SamsungOneKorean-700.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SamsungOneKorean 700C";
-  src: url("../fonts/SamsungOneKorean-700C.woff2") format("woff2"), url("../fonts/SamsungOneKorean-700C.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+  src: url("../fonts/Pretendard-Bold.woff2") format("woff2"), url("../fonts/Pretendard-Bold.woff") format("woff");
 }
 /* reset */
 *, *:before, *:after {
@@ -94,7 +45,7 @@ body {
   line-height: 1.5;
   font-size: 17px;
   letter-spacing: -0.1px;
-  font-family: "SamsungOneKorean 400C", "Malgun Gothic", "맑은 고딕", sans-serif !important;
+  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
   color: #000;
 }
 
@@ -160,7 +111,7 @@ button, input[type=button], input[type=submit], input[type=reset], input[type=fi
 }
 
 input, select, textarea, button, pre {
-  font-family: "SamsungOneKorean 700C", "Malgun Gothic", "맑은 고딕", sans-serif !important;
+  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
 }
 
 a {
