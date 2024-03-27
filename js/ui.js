@@ -10,6 +10,7 @@ $(function(){
 		$(this).toggleClass('content__title__core__bookmark-toggle-btn--checked');
 	  })
 	
+
 	  // 개발시 미적용 되어야함
 	  $(document).on('click', '[data-action="header-bookmark"]', function () {
 		$(this).toggleClass('header-wrap__menu-wrap__main-info-box__bookmark-wrap__toggle-btn--checked');
@@ -17,7 +18,7 @@ $(function(){
 		// 개발시 적용 필요
 		$('.header-wrap__menu-wrap__main-info-box__bookmark-wrap__list-box').toggleClass('header-wrap__menu-wrap__main-info-box__bookmark-wrap__list-box--open');
 		// 개발시 적용 필요
-	  })
+	  });
 	  // 개발시 미적용 되어야함
 	
 	  $(document).on('click', '[data-action="layer-close"]', function () {
