@@ -3,7 +3,9 @@ $(function(){
 		$('.lnb').toggleClass('lnb--off');
 	  })
 	  $(document).on('click', '[data-action="lnb-1depth"]', function () {
-		$(this).parent('.lnb__menu-box').toggleClass('lnb__menu-box--current');
+		$('.lnb__menu-box').removeClass('lnb__menu-box--current');
+		$(this).parent('.lnb__menu-box').addClass('lnb__menu-box--current');
+		//$(this).parent('.lnb__menu-box').toggleClass('lnb__menu-box--current');
 	  })
 	
 	  $(document).on('click', '[data-action="bookmark-toggle"]', function () {
