@@ -62,7 +62,7 @@
                             data-action="bookmark-toggle">
                             <span>즐겨찾기</span>
                         </button>
-                        <strong>불완전판매율1</strong>
+                        <strong>불완전판매율</strong>
                     </div>
                     <div class="content__title__breadcrumb">
                         <span>Home</span>
@@ -676,6 +676,13 @@
 
         var httpRequest;
 
+        function changeChart(w, h) {
+            var ch = document.getElementById("chartHolder")
+            ch.style.width = w+"px";
+            ch.style.height = h+"px";
+            document.getElementById("chart1").resize();
+        }
+
         function setProvider(filename) {
             httpRequest = new XMLHttpRequest();
             httpRequest.onreadystatechange = loadData;
@@ -810,6 +817,8 @@
             });
 
         }
+        
+        
 
         //rmate
         // -----------------------차트 설정 시작-----------------------

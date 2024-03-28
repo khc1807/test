@@ -1,6 +1,19 @@
 $(function(){
 	$(document).on('click', '[data-action="lnb-toogle"]', function () {
+		let conW = $('.content').innerWidth();
+		console.log(conW)
 		$('.lnb').toggleClass('lnb--off');
+
+		if($('.lnb').hasClass('lnb--off')){
+			changeChart(conW, 400);
+			
+		} else{
+			
+			let conW2 = conW - $('.lnb').innerWidth();
+			changeChart(conW2, 400);
+			//console.log(conW2)
+		}
+		
 	  })
 	  $(document).on('click', '[data-action="lnb-1depth"]', function () {
 		$('.lnb__menu-box').removeClass('lnb__menu-box--current');
